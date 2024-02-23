@@ -2,7 +2,15 @@
 
 int search(int numbers[], int low, int high, int value) 
 {
-	return -1;
+	if (low > high)
+		return -1;
+	else {
+		if (numbers[low] == value)
+			return low;
+	}
+
+	return search(numbers, low + 1, high, value);
+
 }
 
 void printArray(int numbers[], int sz)
@@ -57,4 +65,4 @@ int main(void)
 	}
 
 	fclose(inFile);
-}
+}//Ezekiel Echenique Lab 6
